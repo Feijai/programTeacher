@@ -1,0 +1,22 @@
+.globalBGGray {
+  background-color: #2D2D2D;
+}
+
+.globalBGBlack {
+  background-color: #000000;
+}
+
+.fontLightGray {
+  color: #C1C1C1
+}
+
+/* 漸層色 */
+/* 上下 */
+.linearLR {
+  color: linear-gradient(to bottom, #09ACF5, #62DB54);
+}
+
+/* 左右 */
+.linearLR {
+  color: linear-gradient(to right, #09ACF5, #62DB54);
+}
