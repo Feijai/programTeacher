@@ -19,7 +19,7 @@ const HeaderCss = styled.div`
             object-fit: cover;
         }
     }
-    .headFc{
+    .pcHead{
         font-size:18px;
         column-gap:48px;
         display:flex;
@@ -31,7 +31,7 @@ const HeaderCss = styled.div`
             background-color:inherit;
         }
     }
-    .menu{
+    .mbMenu{
         width:24px;
         height:24px;
         display:none;
@@ -46,9 +46,13 @@ const HeaderCss = styled.div`
             }
         }
         .headFc{
+            display: flex;
+            justify-content:end;
+        }
+        .pcHead{
             display:none;
         }
-        .menu{
+        .mbMenu{
             display:block;
         }
     }
@@ -64,8 +68,8 @@ const Header: React.FC<ModalProps> = (props) => {
                     <img src={p2} alt="" className='img2' />
                 </div>
 
-                <div className="col-6 align-self-center">
-                    <div className='headFc justify-content-end align-items-center'>
+                <div className="col-6 align-self-center headFc">
+                    <div className='pcHead justify-content-end align-items-center'>
                         <Button >首頁</Button>
                         <Button>課程介紹</Button>
                         <Button className='d-flex' onClick={() => { getLoginModal() }}>
@@ -75,7 +79,7 @@ const Header: React.FC<ModalProps> = (props) => {
                             登入
                         </Button>
                     </div>
-                    <span className="material-icons menu">drag_handle</span>
+                    <span className="material-icons mbMenu">drag_handle</span>
                 </div>
             </div>
         </HeaderCss>
