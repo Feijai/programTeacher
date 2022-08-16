@@ -1,1 +1,1 @@
-export const SET_SIDEBAR = 'SET_SIDEBAR'
+export const SET_LOGIN_MODAL = 'SET_LOGIN_MODAL'

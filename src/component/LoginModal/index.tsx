@@ -3,11 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import styled from 'styled-components'
 import FbIcon from '../../assets/icon_fb'
 import GoogleIcon from '../../assets/icon_google'
-
-interface LoginModalProps {
-    show: boolean;
-    setShow: React.Dispatch<React.SetStateAction<boolean>>
-}
+import { ModalProps } from '../../globalInterFace'
 
 const LoginModalCss = styled.div`
     border-color:#FFFFFF;
@@ -15,25 +11,29 @@ const LoginModalCss = styled.div`
     .header{
         padding:24px;
         position:relative;
+        display:flex;
         .title{
             font-size:24px;
             font-weight:bold;
             line-height:1.5;
             left:48%;
         }
-        .btn-close{
+        .closeBtn{
             position:absolute;
             right:29px;
         }
-
     }
     .container{
-        margin-top:8px;
-        margin-bottom:60px;
         width: 331px;
         flex-wrap:wrap;
         flex-direction:column;
         row-gap:24px;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .loginForm{
+        margin-top:8px;
+        margin-bottom:60px;
         input{
             border-radius:4px;
             background-color:#1C1C1C;
@@ -45,11 +45,12 @@ const LoginModalCss = styled.div`
             width:100%;
             border-radius:8px;
             height:42px;
+            border: 0px;
         }
     }
 
-    .otherLogin{
-        width: 331px;
+    .sperater{
+        max-width: 331px;
         margin: 27px auto;
         border-top: 1px solid black;
         position: relative;
@@ -66,6 +67,7 @@ const LoginModalCss = styled.div`
         button{
             border-color:white;
             border-radius:4px;
+            height:40px;
             width:100%;
             position:relative;
             svg{
@@ -77,36 +79,65 @@ const LoginModalCss = styled.div`
         }
     }
     @media (max-width: 575px){
+        .header{
+            display:block;
+            margin:16px;
+            .closeBtn{
+                position:unset;
+                text-align:end
+            }
+            .title{
+                text-align:center;
+            }
+            
+        }
         .container{
             width:100%;
+            padding-right:24px;
+            padding-left:24px;
+        }
+        .loginForm{
+            margin-bottom:36px;
+        }
+        .otherButton{
+            margin-bottom:48px;
+        }
+        .sperater{
+            max-width:calc(100% - 48px);
+            .loginWay{
+                left: 38%;
+            }
         }
     }
 `
 
 
-const LoginModal: React.FC<LoginModalProps> = ({ show, setShow }) => {
+const LoginModal: React.FC<ModalProps> = ({ modalState, getLoginModal }) => {
     const handleClose = () => {
-        setShow(false)
+        getLoginModal()
     }
     return (
-        <Modal show={show} onHide={handleClose} centered size="lg">
+        <Modal show={modalState} onHide={handleClose} centered size="lg">
             <LoginModalCss className=''>
-                <div className='header d-flex justify-content-center'>
+                <div className='header justify-content-center'>
+                    <div className='closeBtn'>
+                        <button type="button" className="btn-close btn-close-white" aria-label="Close"
+                            onClick={handleClose} />
+                    </div>
                     <div className='title fontWhite'>
                         登入
                     </div>
-                    <button type="button" className="btn-close btn-close-white" aria-label="Close"
-                        onClick={handleClose} />
+
                 </div>
 
-                <div className="container fontLightGray d-flex">
+                <div className="container fontLightGray d-flex loginForm">
                     <div className='s16'>信箱 <input type="text" className='s16 fontLightGray' /></div>
 
                     <div className='s16'>密碼 <input type="password" className='s16 fontLightGray' /></div>
                     <button className='linearLR fontWhite s18' onClick={handleClose}>登入</button>
                 </div>
 
-                <div className="otherLogin ">
+                <div className="sperater ">
                     <div className="loginWay fontLightGray s16 globalBGGray">其他登入方式</div>
                 </div>
 
