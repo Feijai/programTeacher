@@ -7,6 +7,9 @@ import p2 from '../../assets/logo2.svg';
 
 const HeaderCss = styled.div`
     padding:24px 70px;
+    border-width: 2px;
+    border-style: solid;
+    border-image:linear-gradient(to right,#09ACF5 50%, #62DB54 50%, #62DB54 100%)  0  0 100% 0;
     .logo{
         height: 42px;
         .img1{
