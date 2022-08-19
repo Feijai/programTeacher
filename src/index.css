@@ -132,9 +132,18 @@ table {
 }
 
 /* 客製開始 */
+
 html {
 	font-family: 'Noto Sans TC';
 	;
+}
+
+.col-gap {
+	column-gap: 2rem;
+}
+
+.row-gap {
+	row-gap: 2rem;
 }
 
 .globalBGGray {
@@ -165,6 +174,10 @@ html {
 	color: #909090;
 }
 
+.fontColorGreen {
+	color: #62DB54
+}
+
 /* 漸層色 */
 /* 上下 */
 .linearTD {
@@ -190,6 +203,7 @@ html {
 	font-size: 24px;
 	line-height: 1.5;
 }
+
 .s16 {
 	font-size: 16px;
 	line-height: 1.5;
