@@ -64,7 +64,7 @@ const HeaderCss = styled.div`
 const Header: React.FC<ModalProps> = (props) => {
     const { getLoginModal } = props
     return (
-        <HeaderCss className='globalBGGray fontWhite '>
+        <HeaderCss className='globalBGGray '>
             <div className="row p-6">
                 <div className="logo col-6 ">
                     <img src={p1} alt="" className='img1' />

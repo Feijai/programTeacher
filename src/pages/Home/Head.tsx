@@ -68,7 +68,7 @@ const HeadCss = styled.div`
 
 export default function Head() {
     return (
-        <HeadCss className="d-flex justify-content-center align-items-center fontWhite">
+        <HeadCss className="d-flex justify-content-center align-items-center">
             <div className="container globalBGBlack2">
                 <div className='leftTop whiteBox'/>
                 <div className='leftBottom whiteBox'/>

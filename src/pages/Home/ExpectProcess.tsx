@@ -98,11 +98,11 @@ const ExpectCard: React.FC<ExpectCardProps> = (props) => {
 export default function ExpectProcess() {
     return (
         <ExpectProcessCss className='globalBGBlack2'>
-            <div className="container paddingTB80 fontWhite">
+            <div className="container paddingTB80">
                 <div className="header s28"><h2>預期上課流程</h2><div className='borderBottom'></div></div>
                 <div className="row g-0 row-gap">
-                    {data.map(ele => (
-                        <ExpectCard {...ele} />
+                    {data.map((ele, idx) => (
+                        <ExpectCard {...ele} key={idx} />
                     ))}
 
                 </div>

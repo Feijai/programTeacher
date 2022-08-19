@@ -11,8 +11,10 @@ const FooterCss = styled.div`
 export default function Footer() {
     return (
         <FooterCss className='globalBGDark fontDarkGray'>
-            <div className="row justify-content-center align-items-center">
-                Coding Home © 2022 All Rights Reserved
+            <div className="container">
+                <div className="row justify-content-center align-items-center">
+                    Coding Home © 2022 All Rights Reserved
+                </div>
             </div>
         </FooterCss>
     )

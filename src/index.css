@@ -132,11 +132,11 @@ table {
 }
 
 /* 客製開始 */
-
-html {
+body{
 	font-family: 'Noto Sans TC';
-	;
+	color: white;
 }
+
 
 .col-gap {
 	column-gap: 2rem;
@@ -144,6 +144,10 @@ html {
 
 .row-gap {
 	row-gap: 2rem;
+}
+
+.titleWord{
+	font-weight: bold;
 }
 
 .globalBGGray {

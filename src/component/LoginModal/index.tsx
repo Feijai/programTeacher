@@ -124,7 +124,7 @@ const LoginModal: React.FC<ModalProps> = ({ modalState, getLoginModal }) => {
                         <button type="button" className="btn-close btn-close-white" aria-label="Close"
                             onClick={handleClose} />
                     </div>
-                    <div className='title fontWhite'>
+                    <div className='title'>
                         登入
                     </div>
 
@@ -134,7 +134,7 @@ const LoginModal: React.FC<ModalProps> = ({ modalState, getLoginModal }) => {
                     <div className='s16'>信箱 <input type="text" className='s16 fontLightGray' /></div>
 
                     <div className='s16'>密碼 <input type="password" className='s16 fontLightGray' /></div>
-                    <button className='linearLR fontWhite s18' onClick={handleClose}>登入</button>
+                    <button className='linearLR s18' onClick={handleClose}>登入</button>
                 </div>
 
                 <div className="sperater ">
@@ -142,11 +142,11 @@ const LoginModal: React.FC<ModalProps> = ({ modalState, getLoginModal }) => {
                 </div>
 
                 <div className="container d-flex otherButton">
-                    <button className='fb globalBGGray fontWhite'>
+                    <button className='fb globalBGGray'>
                         <FbIcon name={'fbLogo'} />
                         <span>Facebook 登入</span>
                     </button>
-                    <button className='google globalBGGray fontWhite'>
+                    <button className='google globalBGGray'>
                         <GoogleIcon name={'GoogleLogo'} />
                         <span>Google 登入</span>
                     </button>
