@@ -4,6 +4,7 @@ import p1 from '../../assets/logo.svg'
 import Button from 'react-bootstrap/Button';
 import { ModalProps } from '../../globalInterFace'
 import p2 from '../../assets/logo2.svg';
+import { Link } from "react-router-dom";
 
 const HeaderCss = styled.div`
     padding:24px 70px;
@@ -39,6 +40,10 @@ const HeaderCss = styled.div`
         height:24px;
         display:none;
     }
+    a{
+        text-decoration: none;
+        color:white;
+    }
     @media (max-width: 827px) {
         .logo{
             .img1{
@@ -73,8 +78,8 @@ const Header: React.FC<ModalProps> = (props) => {
 
                 <div className="col-6 align-self-center headFc">
                     <div className='pcHead justify-content-end align-items-center'>
-                        <Button >首頁</Button>
-                        <Button>課程介紹</Button>
+                        <Link to="/"><Button>首頁</Button></Link>
+                        <Link to="/class"><Button>課程介紹</Button></Link>
                         <Button className='d-flex' onClick={() => { getLoginModal() }}>
                             <span className="material-icons">
                                 account_circle

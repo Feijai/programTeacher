@@ -7,6 +7,7 @@ import LoginModal from './component/LoginModal';
 import { connect } from 'react-redux'
 import { clickModalButtonAction } from './redux/actions/ModalAction'
 import { ModalProps } from './globalInterFace'
+import AllCalss from './pages/AllCalss';
 
 const App: React.FC<ModalProps> = (props) => {
   const { modalState, getLoginModal } = props
@@ -15,7 +16,7 @@ const App: React.FC<ModalProps> = (props) => {
       <Header modalState={modalState} getLoginModal={getLoginModal} />
       <Routes>
         <Route path="/" element={< Home />} />
-
+        <Route path="/class" element={<AllCalss />} />
       </Routes>
       <Footer />
       <LoginModal modalState={modalState} getLoginModal={getLoginModal} />
