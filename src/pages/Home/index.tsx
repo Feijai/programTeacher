@@ -3,6 +3,9 @@ import Head from './Head'
 import Hand from './Hand'
 import ExpectProcess from './ExpectProcess'
 import WantLearn from './WantLearn'
+import HotClass from './HotClass'
+import Learning from './Learning'
+import Article from './Article'
 
 const Home: React.FC = () => {
     return (
@@ -11,6 +14,9 @@ const Home: React.FC = () => {
             <Hand />
             <ExpectProcess />
             <WantLearn />
+            <HotClass />
+            <Learning />
+            <Article />
         </>
     )
 }

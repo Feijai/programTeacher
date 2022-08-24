@@ -198,6 +198,11 @@ body{
 	line-height: 1.5;
 }
 
+.s32 {
+	font-size: 32px;
+	line-height: 1.5;
+}
+
 .s28 {
 	font-size: 28px;
 	line-height: 1.5;
@@ -205,6 +210,11 @@ body{
 
 .s24 {
 	font-size: 24px;
+	line-height: 1.5;
+}
+
+.s20 {
+	font-size: 20px;
 	line-height: 1.5;
 }
 

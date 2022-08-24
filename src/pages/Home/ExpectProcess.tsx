@@ -1,22 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import TitleComp from '../../component/TitleComp';
 
 const ExpectProcessCss = styled.div`
-    .header{
-        height:56px;
-        font-weight:bold;
-        text-align:center;
-        position: relative;
-        .borderBottom{
-            width: 50px;
-            height:3px;
-            background-color:#62DB54;
-            position:absolute;
-            left:50%;
-            bottom:0;
-            transform: translate(-50%);
-        }
-    }
+
     .row{
         margin-top:74px;
         justify-content:space-between;
@@ -57,9 +44,6 @@ const ExpectProcessCss = styled.div`
         .expectCard{
             max-width:100%; 
         }
-        .header {
-            font-size:24px;
-        }
         .row{
             margin-top:50px;
             row-gap:50px;
@@ -99,7 +83,7 @@ export default function ExpectProcess() {
     return (
         <ExpectProcessCss className='globalBGBlack2'>
             <div className="container paddingTB80">
-                <div className="header s28"><h2>預期上課流程</h2><div className='borderBottom'></div></div>
+                <TitleComp title={['預期上課流程']} />
                 <div className="row g-0 row-gap">
                     {data.map((ele, idx) => (
                         <ExpectCard {...ele} key={idx} />
