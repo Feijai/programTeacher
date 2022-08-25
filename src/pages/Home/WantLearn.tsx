@@ -44,7 +44,7 @@ const WantLearnCss = styled.div`
 const data = ['JavaScript', 'HTML/CSS', 'SQL', 'JAVA', 'Bash/Shell', 'Python', 'Android', 'IOS', 'PHP', 'C++', '.net', 'Dart', 'Flutter']
 
 const SwiperComponent: React.FC = () => {
-    return (<Swiper watchSlidesProgress={true} slidesPerView={'auto'} spaceBetween={16}>
+    return (<Swiper watchSlidesProgress={true} slidesPerView={6} spaceBetween={16}>
         {data.map((ele, idx) => (
             <SwiperSlide key={idx} className="s18" >{ele}</SwiperSlide>
         ))}
