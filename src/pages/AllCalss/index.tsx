@@ -106,7 +106,7 @@ const ClassCard = () => {
                 <h3 className='language s16 fontColorGreen'>{data.languageType}</h3>
                 <div className='text s16'>{data.text}</div>
             </div>
-            <div className="payment">
+            <div className="payment ">
                 <div className="time s16">50分鐘</div>
                 <h2 className="money s32">{`NT$${data.money}`}</h2>
                 <button className="introduce s18 globalBGGray ">課程介紹</button>
