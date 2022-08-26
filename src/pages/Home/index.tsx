@@ -6,6 +6,7 @@ import WantLearn from './WantLearn'
 import HotClass from './HotClass'
 import Learning from './Learning'
 import Article from './Article'
+import Beteacher from './Beteacher'
 
 const Home: React.FC = () => {
     return (
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
             <HotClass />
             <Learning />
             <Article />
+            <Beteacher />
         </>
     )
 }

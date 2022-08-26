@@ -9,20 +9,12 @@ const ArticleCss = styled.div`
     .articleCards{
         margin-top:48px;
         column-gap:24px;
+        row-gap:24px;
     }
     .articleCard{
         padding: 32px;
         width:calc(33.33% - 16px);
-        background:
-                    linear-gradient(to top, #62DB54, #62DB54) left top no-repeat,/*上左*/
-                    linear-gradient(to right, #62DB54, #62DB54) left top no-repeat,/*左上*/
-                    linear-gradient(to left, #62DB54, #62DB54) right top no-repeat,/*上右*/
-                    linear-gradient(to bottom, #62DB54, #62DB54) right top no-repeat,/*上右*/
-                    linear-gradient(to left, #62DB54, #62DB54) left bottom no-repeat,/*下左*/
-                    linear-gradient(to bottom, #62DB54, #62DB54) left bottom no-repeat,/*左下*/
-                    linear-gradient(to top, #62DB54, #62DB54) right bottom no-repeat,/*下右*/
-                    linear-gradient(to left, #62DB54, #62DB54) right bottom no-repeat;/*右下*/
-        background-size: 1px 32px, 32px 1px, 1px 32px, 32px 1px;
+        position: relative;
         img{
             width:100%;
         }
@@ -42,8 +34,59 @@ const ArticleCss = styled.div`
                 border:0px;
             }
         }
+
         :hover{
-            
+            .border_corner{
+                z-index: 3;
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                background: rgba(0,0,0,0);
+                border: 1px solid #62DB54;
+            }
+            .border_corner_left_top{
+                top: -2px;
+                left: -2px;
+                border-right: none;
+                border-bottom: none;
+                border-top-left-radius: 6px;
+            }
+            .border_corner_right_top{
+                top: -2px;
+                right: -2px;
+                border-left: none;
+                border-bottom: none;
+                border-top-right-radius: 6px;
+            }
+            .border_corner_left_bottom{
+                bottom: -2px;
+                left: -2px;
+                border-right: none;
+                border-top: none;
+                border-bottom-left-radius: 6px;
+            }
+            .border_corner_right_bottom{
+                bottom: -2px;
+                right: -2px;
+                border-left: none;
+                border-top: none;
+                border-bottom-right-radius: 6px;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .container{
+            padding:40px 12px;
+        }
+        .articleCards{
+            margin-top:40px;
+            flex-wrap:wrap;
+            flex-direction: column
+        }
+        .articleCard{
+            pointer-events: none;
+            padding:0px;
+            width:100%
         }
     }
 
@@ -66,6 +109,11 @@ interface ArticleCardProps {
 const ArticleCard: React.FC<ArticleCardProps> = (data) => {
     return (
         <div className="articleCard">
+            {/* border 四個角 */}
+            <div className="border_corner border_corner_left_top"></div>
+            <div className="border_corner border_corner_right_top"></div>
+            <div className="border_corner border_corner_left_bottom"></div>
+            <div className="border_corner border_corner_right_bottom"></div>
 
             <img src={data.pic} alt="" />
             <div className="cardTitle s18 titleWord">{data.title}</div>
@@ -80,7 +128,7 @@ export default function Article() {
         <ArticleCss className='globalBGBlack2 '>
             <div className="container paddingTB80">
                 <TitleComp title={['文章分享']} />
-                <div className="articleCards">
+                <div className="articleCards d-flex">
                     {data.map((ele, idx) => (
                         <ArticleCard key={idx} {...ele} />
                     ))}
