@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "./static/css/main.6d91c759.css",
+    "main.js": "./static/js/main.6ca7e6ee.js",
+    "static/media/bg_home.jpg": "./static/media/bg_home.463432f97c2980a13a88.jpg",
+    "static/media/info03.jpg": "./static/media/info03.eaf41a87793bdcd7ce5b.jpg",
+    "static/media/info02.jpg": "./static/media/info02.627b165e118bcab09277.jpg",
+    "static/media/bg_share.jpg": "./static/media/bg_share.4568999bc3cf3f401636.jpg",
+    "static/media/share.jpg": "./static/media/share.ab5b6c77de9d766ddb67.jpg",
+    "static/media/info04.jpg": "./static/media/info04.d3d8282b72abd4870cf7.jpg",
+    "static/media/article01.jpg": "./static/media/article01.02960aeee13984914806.jpg",
+    "static/media/teacher01.jpg": "./static/media/teacher01.9787ed5ff09336d0d582.jpg",
+    "static/media/student04.jpg": "./static/media/student04.19fc5b2ab9de9ce433cd.jpg",
+    "static/media/student03.jpg": "./static/media/student03.79f20889769182c3c27e.jpg",
+    "static/media/teacher03.jpg": "./static/media/teacher03.563f4a3f377a24b98c03.jpg",
+    "static/media/info01.jpg": "./static/media/info01.3fefefb187d16ea81147.jpg",
+    "static/media/teacher04.jpg": "./static/media/teacher04.6225e094814b16cc050b.jpg",
+    "static/media/student01.jpg": "./static/media/student01.ae546e50d3133f34b4ee.jpg",
+    "static/media/teacher02.jpg": "./static/media/teacher02.f05d65d2959b1fd9de38.jpg",
+    "static/media/article03.jpg": "./static/media/article03.bf4f4d1950d371c81513.jpg",
+    "static/media/article02.jpg": "./static/media/article02.a288b7b479c98a68a763.jpg",
+    "static/media/student02.jpg": "./static/media/student02.6f887113fb53b042732b.jpg",
+    "static/media/bg_home_mobile.jpg": "./static/media/bg_home_mobile.401dc331dccd3ad3994f.jpg",
+    "static/media/logo.svg": "./static/media/logo.8be21aff99d6b5dc7407bde63e7ec88a.svg",
+    "static/media/logo2.svg": "./static/media/logo2.808af3fec9769a2cf1822487aa0767f2.svg",
+    "index.html": "./index.html",
+    "main.6d91c759.css.map": "./static/css/main.6d91c759.css.map",
+    "main.6ca7e6ee.js.map": "./static/js/main.6ca7e6ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d91c759.css",
+    "static/js/main.6ca7e6ee.js"
+  ]
+}
