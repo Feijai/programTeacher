@@ -82,6 +82,25 @@ const BeteacherCss = styled.div`
         .swiperFunc{
             left: calc(100% / 7);
         }
+        .becomeUs{
+            flex-direction:column;
+            text-align:center;   
+            margin-top:40px;    
+            padding:40px;
+
+            .header{
+                flex-direction:column;
+            }
+            .joinUs{
+                margin-top:24px;
+            }
+            .text{
+                margin-top:24px;
+            }
+            button{
+                margin-top:24px;
+            }
+        }
     }
     @media (max-width: 768px) {
         padding-top:40px;
@@ -271,7 +290,7 @@ export default function Beteacher() {
                     </div>
                 </Swiper>
                 <div className="becomeUs">
-                    <div className='d-flex'>
+                    <div className='d-flex header'>
                         <span className='material-icons material-symbols-outlined'>menu_book</span>
                         <div className='joinUs'>
                             <h2 className='s28'>加入我們成為導師</h2>
